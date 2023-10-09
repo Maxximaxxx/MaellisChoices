@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You said Yes???</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #question {
+            font-size: 74px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Young', serif;
+        }
+
+        #buttons {
+            display: flex;
+        }
+
+        .button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            cursor: pointer;
+            background-color: white;
+            font-family: 'Young', serif;
+            animation: breathe 2s infinite alternate;
+            border-radius: 20px;
+        }
+
+        @keyframes breathe {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        #yes {
+            color: green;
+        }
+
+        #no {
+            color: red;
+        }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 768px) {
+            #question {
+                font-size: 36px;
+            }
+
+            .button {
+                font-size: 14px;
+                width: 100%; /* Make buttons full-width on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="question">You said <span id="like" style="color: rgb(255, 0, 0);">yes</span>???</div>
+    <div id="buttons">
+        <button class="button" id="yes">
+            <a href="Yes i did.html">Yes i did!!</a>
+        </button>
+        <button class="button" id="no">
+            <a href="No it was a mistake.html">No it was a mistake :/</a>
+        </button>
+    </div>
+</body>
+</html>
